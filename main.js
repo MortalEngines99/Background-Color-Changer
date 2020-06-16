@@ -1,4 +1,5 @@
 const body = document.getElementsByTagName("body")[0];
+const gridChildren = document.querySelectorAll("#grid > div");
 const changeBackgroundBtn = document.getElementById("changeBackground");
 const rgbParagraph = document.getElementById("rgbParagraph");
 let red,green,blue = 0;
@@ -24,6 +25,14 @@ function changeBackgroundColor(){
 
     let rgb = `rgb(${red},${green},${blue})`;
 
-    body.style.backgroundColor = rgb;
     rgbParagraph.innerText = rgb;
+
+    //Create anime animation to transition background color
+    anime({
+        targets:gridChildren,
+        backgroundColor:`${rgb}`,
+        duration:500,
+        delay: anime.stagger(50),
+        easing:"easeInOutQuad",
+      });
 }
