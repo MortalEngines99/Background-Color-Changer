@@ -11,11 +11,18 @@
     <!-- Custom Script -->
     <script src="./main.js" defer></script>
 
+    <!-- Clipboard.js 2.0.4 CDN to enable copying rgb color to system clipboard -->
+    <!-- Check it out at https://clipboardjs.com/ -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" defer></script>
+
+    <!-- Instantiate Clipboard JS  -->
+    <script src="./clipboard.js" defer></script>
+
 </head>
 <body>
 
     <h3 id="changeBackground">Press spacebar or click here to change background color</h3>
-    <p id="rgbParagraph">rgb(233,34,124)</p>
+    <p id="rgbParagraph" data-clipboard-target="#rgbParagraph">rgb(233,34,124)</p>
 
 </body>
 </html>

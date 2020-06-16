@@ -28,4 +28,11 @@ h3{
 h3:active,
 h3:hover{color:#EDEDED;}
 
-p{font-size:1.2rem;}
+p{
+    font-size:1.2rem;
+    cursor:pointer;
+    transition: scale 0.5s ease;
+}
+
+p:focus,
+p:hover{scale: 1.3;}
