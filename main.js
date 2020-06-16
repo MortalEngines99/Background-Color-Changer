@@ -4,6 +4,8 @@ const changeBackgroundBtn = document.getElementById("changeBackground");
 const rgbParagraph = document.getElementById("rgbParagraph");
 let red,green,blue = 0;
 
+document.addEventListener("DOMContentLoaded",() => changeBackgroundColor());
+
 //Add spacebar event listener on body element
 body.addEventListener("keyup",(e) => {
     if(e.code === "Space"){
